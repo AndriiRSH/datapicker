@@ -1,0 +1,205 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #4169E1;
+  font-family: 'Saira', Arial, Helvetica, sans-serif;
+}
+
+h1{
+  margin: 30px 0px;
+  color: black;
+  font-size: 42px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.date-picker{
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 60px;
+  background-color: #FFF;
+  margin: 30px auto;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.date-picker:hover{
+  background-color: #F3F3F3;
+}
+
+.date-picker .selected-date{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
+  font-size: 28px;
+}
+
+.date-picker .selected-date.mode{
+  background-color: #808080;
+  color: white;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.date-picker .dates{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 0px 0px 25px 25px;
+  background-color: #FFF;
+}
+
+.date-picker .dates.active{
+  display: block;
+}
+
+.date-picker .dates.active.mode{
+  background-color: black;
+  color: white;
+}
+
+.date-picker .dates .month{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-picker .dates .month .arrows{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.date-picker .dates .month .arrows.mode{
+  color: white;
+}
+
+.date-picker .dates .month .arrows:hover{
+  background-color: #F3F3F3;
+}
+
+.date-picker .dates .month .arrows:active{
+  background-color: #00CA85;
+}
+
+.date-picker .dates .days{
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.date-picker .dates .days .day{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-picker .dates .days .day.mode{
+  color: white;
+}
+
+
+.date-picker .dates .weeks{
+  height: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.date-picker .dates .weeks .week{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-picker .dates .weeks .week.mode{
+  color: white;
+}
+
+.date-picker .dates .days .day.selected{
+  background-color: #00CA85;
+  border-radius: 50%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.container{
+  display: flex;
+  margin-left: 160px;
+  margin-bottom: 15px;
+}
+
+.dark-mode{
+  margin-top: 8px;
+}
